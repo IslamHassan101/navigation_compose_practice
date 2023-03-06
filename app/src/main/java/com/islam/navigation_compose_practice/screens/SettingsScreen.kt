@@ -1,4 +1,4 @@
-package com.islam.navigation_compose_practice
+package com.islam.navigation_compose_practice.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -12,10 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 
+
 @Composable
-fun HomeScreen(
-    onHomeButtonClicked: () -> Unit
-) {
+fun SettingScreen(onSettingsButtonClicked: () -> Unit) {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -23,9 +22,9 @@ fun HomeScreen(
     ) {
 
         Text(
-            modifier = Modifier.clickable(onClick = onHomeButtonClicked),
-            text = "HOME",
-            color = MaterialTheme.colors.secondary,
+            modifier = Modifier.clickable(onClick = onSettingsButtonClicked),
+            text = "SETTING",
+            color = MaterialTheme.colors.primaryVariant,
             style = MaterialTheme.typography.h4,
             fontWeight = FontWeight.Bold
         )
@@ -34,6 +33,6 @@ fun HomeScreen(
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview() {
-    HomeScreen(onHomeButtonClicked = {})
+fun DetailsScreenPreview() {
+    SettingScreen(onSettingsButtonClicked = {})
 }
